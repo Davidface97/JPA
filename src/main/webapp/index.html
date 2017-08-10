@@ -1,21 +1,22 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <title>User Autentication</title>
+        <title>Registrar Usuario</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel='stylesheet' href='estilos.css'>
     </head>
-    <body background="Pictures/Fondos/fondo2.jpg">
-        <br><br><br><br><br><br><br><br><br><br>
-        <form class='contacto' name="formularioLogin" action="Servlet_Login" method="post">
-            <center><div><label>Id Usuario:</label><input type="text" name="IdLogin"></div></center>
-            <center><div><label>Contraseña:</label><input type="password" name="PassLogin"></div></center>
-            <center><div><input type="submit" name= "Login" value="Iniciar Sesion"></div></center>
+    <body background="fondo2.jpg">
+        <br><br><br><br><br><br><br><br>
+        <br><br><br><br>
+        
+        <form class='contacto' name="FormularioTabla" action="Servlet_Menu?opcion=1000" method="post">
+            <div><label><center> Nombre </center></label><input type="text" name="nombre"></div>
+            <div><label><center> Apellido </center></label><input type="text" name="apellido"></div>
+            <div><label><center> Telefono </center></label><input type="text" name="tel"></div>
+            <div><label><center> Celular </center></label><input type="text" name="cel"></div>
+            <div><center><input type="submit" name= "RegistrarProducto" value="Registrar"></center></div>
         </form>
-    <center>
-        <h3 style="color: #ffffff"> No tienes un usuario? Crealo haciendo click <a target=_self href="CrearUser.html"> Aqui</a></h3> 
-    </center>
 
-</body>
+
+    </body>
 </html>

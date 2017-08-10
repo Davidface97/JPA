@@ -91,7 +91,7 @@ public class Servlet_Menu extends HttpServlet {
                     String Apellido = request.getParameter("ApellidoUserReg");
                     String Correo = request.getParameter("CorreoUserReg");
                     String Telefono = request.getParameter("TelUserReg");
-                    b = service.insertarUser(idCrear, pass, Nombre, Apellido, Correo, Telefono);
+                    b = service.insertarUser(Nombre, Apellido, Correo, Telefono);
 
                     if (b == true) {
                         out.println("<!DOCTYPE html>");
@@ -1113,6 +1113,31 @@ public class Servlet_Menu extends HttpServlet {
                         out.println("</body>");
                         out.println("</html>");
                     }
+                    break;
+                case 1000:
+                    String Nombre22 = request.getParameter("nombre");
+                    String Apellido22 = request.getParameter("apellido");
+                    String Telefono22 = request.getParameter("tel");
+                    String Celular22 = request.getParameter("cel");
+                    b = service.insertarUser(Nombre22, Apellido22, Telefono22, Celular22);
+                    
+                    out.println("<!DOCTYPE html>");
+                    out.println("<html>");
+                    out.println("<head>");
+                    out.println("<title>Servlet</title>");
+                    out.println("<meta http-equiv=" + "Refresh" + " content=" + "6;url=" + "index.html" + ">");
+                    out.println("</head>");
+                    out.println("<body>");
+                    out.println("<h1><center>El Usuario Se Agrego Satisfactoriamente...</center></h1>");
+                    out.println("<br>");
+                    out.println("<br>");
+                    out.println("<h1><center>" + Nombre22 + Apellido22 +"</center></h1>");
+                    out.println("<p><center>Seras dirigido automaticamente en cinco segundos al menu principal.</center></p>");
+                    out.println("</body>");
+                    out.println("</html>");
+                    
+                    
+                    
                     break;
 
             }
