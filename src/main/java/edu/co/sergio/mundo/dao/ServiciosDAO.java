@@ -97,7 +97,7 @@ public class ServiciosDAO {
             Logger.getLogger(ServiciosDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        String query = " insert into Users (nom, ap, tel, cel)"
+        String query = " insert into Usuario (nom, ap, tel, cel)"
                 + " values (?, ?, ?, ?)";
 
         PreparedStatement preparedStmt = null;
@@ -644,7 +644,7 @@ public class ServiciosDAO {
 
             case 4:
                 Arreglo.clear();
-                query = "select * from Users";
+                query = "select * from Usuario";
                 i = 0;
 
                 try {
@@ -653,7 +653,7 @@ public class ServiciosDAO {
                     ResultSet rs = st.executeQuery(query);
                     while (rs.next()) {
                         Arreglo.add(rs.getInt(1));
-                        Arreglo.add(rs.getString(3));
+                        Arreglo.add(rs.getString(2));
                     }
 
                     return Arreglo;

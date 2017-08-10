@@ -1132,6 +1132,12 @@ public class Servlet_Menu extends HttpServlet {
                     out.println("<br>");
                     out.println("<br>");
                     out.println("<h1><center>" + Nombre22 + Apellido22 +"</center></h1>");
+                    ArrayList a = new ArrayList();
+                    a=service.ListaGeneral(4);
+                    for (int j = 0; j < a.size(); j=j+2) {
+                        out.println("<p>"+ a.get(j)+"</p>");
+                        out.println("<p>"+ a.get(j+1)+"</p>");
+                    }
                     out.println("<p><center>Seras dirigido automaticamente en cinco segundos al menu principal.</center></p>");
                     out.println("</body>");
                     out.println("</html>");
