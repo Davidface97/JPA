@@ -1112,7 +1112,7 @@ public class Servlet_Menu extends HttpServlet {
                         out.println("</center>");
                         out.println("</body>");
                         out.println("</html>");
-                    }
+                    }  
                     break;
                 case 1000:
                     String Nombre22 = request.getParameter("nombre");
