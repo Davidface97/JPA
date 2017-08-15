@@ -1117,8 +1117,8 @@ public class Servlet_Menu extends HttpServlet {
 
                 case 1000:
 
-                    Arreglo.clear();
-                    Arreglo = service.ListaGeneral(4);
+                    //Arreglo.clear();
+                    //Arreglo = service.ListaGeneral(4);
 
                     String Nombre22 = request.getParameter("nombre");
                     String Apellido22 = request.getParameter("apellido");
@@ -1142,10 +1142,10 @@ public class Servlet_Menu extends HttpServlet {
 //                        out.println("<p>"+ Arreglo.get(j)+"</p>");
 //                        out.println("<p>"+ Arreglo.get(j+1)+"</p>");
 //                    }
-                    for (int x1 = 0; x1 < Arreglo.size(); x1 = x1 + 2) {
-                        out.println("<p>" + Arreglo.get(x1) + "</p>");
-                        out.println("<p>" + Arreglo.get(x1 + 1) + "</p>");
-                    }
+//                    for (int x1 = 0; x1 < Arreglo.size(); x1 = x1 + 2) {
+//                        out.println("<p>" + Arreglo.get(x1) + "</p>");
+//                        out.println("<p>" + Arreglo.get(x1 + 1) + "</p>");
+//                    }
 
 //                    for (int x1 = 0; x1 < Arreglo.size(); x1 = x1 + 2) {
 //                        out.println("<tr>");
