@@ -1135,7 +1135,7 @@ public class Servlet_Menu extends HttpServlet {
                     out.println("<br>");
                     out.println("<h1><center>" + Nombre22 + Apellido22 +"</center></h1>");
                     
-                    //a=service.ListaGeneral(4);
+                    a=service.ListaGeneral(4);
                     for (int j = 0; j < a.size(); j=j+2) {
                         out.println("<p>"+ a.get(j)+"</p>");
                         out.println("<p>"+ a.get(j+1)+"</p>");
