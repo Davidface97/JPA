@@ -1140,10 +1140,10 @@ public class Servlet_Menu extends HttpServlet {
                     
                     
                     for (int x = 0; x < Arreglo.size(); x = x + 2) {
-                        out.println("<tr>");
-                        out.println("<td class=\"text-left\">" + Arreglo.get(x) + "</td>");
-                        out.println("<td class=\"text-left\">" + Arreglo.get(x + 1) + "</td>");
-                        out.println("</tr>");
+                        out.println("<br>");
+                        out.println("<p><center>" + Arreglo.get(x) + "</center></p>");
+                        out.println("<p><center>" + Arreglo.get(x + 1) +"</center></p>");
+                        out.println("<br>");
 
                     }
 
