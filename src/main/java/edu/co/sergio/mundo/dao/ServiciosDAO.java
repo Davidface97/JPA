@@ -643,12 +643,12 @@ public class ServiciosDAO {
         switch (x) {
 
             case 4:
+                
                 Arreglo.clear();
                 query = "select * from Usuario";
                 i = 0;
 
                 try {
-
                     Statement st = connection.createStatement();
                     ResultSet rs = st.executeQuery(query);
                     while (rs.next()) {
@@ -659,7 +659,6 @@ public class ServiciosDAO {
                     return Arreglo;
 
                 } catch (SQLException e) {
-                    // TODO Auto-generated catch block
                     System.out.println("Failed to make insertion!");
                     e.printStackTrace();
                 }
