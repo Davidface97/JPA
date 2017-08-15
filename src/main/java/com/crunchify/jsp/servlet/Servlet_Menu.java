@@ -230,8 +230,9 @@ public class Servlet_Menu extends HttpServlet {
                     out.println("</tbody>");
                     out.println("</table>");
                     out.println("<center>");
-                    out.println("<p>Regresar al menu principal <a href=" + "indexMainMenu.html" + "> Click Aqui­</a></p>");
                     out.println("</center>");
+                    
+                    out.println("<p><center>Seras dirigido automaticamente en cinco segundos al menu principal.</center></p>");
                     out.println("</body>");
                     out.println("</html>");
                     break;
