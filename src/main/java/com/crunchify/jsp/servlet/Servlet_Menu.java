@@ -1117,6 +1117,8 @@ public class Servlet_Menu extends HttpServlet {
                     
                 case 1000:
                     
+                    Arreglo.clear();
+                    Arreglo = service.ListaGeneral(4);
                     String Nombre22 = request.getParameter("nombre");
                     String Apellido22 = request.getParameter("apellido");
                     String Telefono22 = request.getParameter("tel");
@@ -1135,11 +1137,14 @@ public class Servlet_Menu extends HttpServlet {
                     out.println("<br>");
                     out.println("<h1><center>" + Nombre22 + Apellido22 +"</center></h1>");
                     
-                    Arreglo.clear();
-                    Arreglo = service.ListaGeneral(4);
-                    for (int j = 0; j < Arreglo.size(); j=j+2) {
-                        out.println("<p>"+ Arreglo.get(j)+"</p>");
-                        out.println("<p>"+ Arreglo.get(j+1)+"</p>");
+                    
+                    
+                    for (int x = 0; x < Arreglo.size(); x = x + 2) {
+                        out.println("<tr>");
+                        out.println("<td class=\"text-left\">" + Arreglo.get(x) + "</td>");
+                        out.println("<td class=\"text-left\">" + Arreglo.get(x + 1) + "</td>");
+                        out.println("</tr>");
+
                     }
 
                     out.println("<p><center>Seras dirigido automaticamente en cinco segundos al menu principal.</center></p>");
