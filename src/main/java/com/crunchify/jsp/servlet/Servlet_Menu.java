@@ -1082,18 +1082,18 @@ public class Servlet_Menu extends HttpServlet {
                     out.println("<html>");
                     out.println("<head>");
                     out.println("<title>Cerrando Sesion</title>");
-                     out.println("<link rel='stylesheet' href='index_style2.css'>");
+                    out.println("<link rel='stylesheet' href='index_style2.css'>");
                     out.println("</head>");
                     out.println("<body background=\"Pictures/Fondos/fondo2.jpg\">");
                     out.println("<center>");
                     out.println("<br><br><br>");
-                    out.println("<p id=\"header\"><em>"+ x +"</em></p>");
+                    out.println("<p id=\"header\"><em>" + x + "</em></p>");
                     out.println("<p id=\"subheader\">Total Inversion</p>");
                     out.println(" <br><br><br><br><br><br><br><br><br><br><br>");
                     out.println("<h3 style=\"color: #ffffff\"><font face=\"sans-serif\"> Regresa al menu principal haciendo <a target=_self href=\"indexMainMenu.html\"> Click Aqui</a></font></h3>");
                     out.println("</center>");
                     out.println("</body>");
-                    out.println("</html>");                   
+                    out.println("</html>");
 
                     break;
 
@@ -1112,19 +1112,20 @@ public class Servlet_Menu extends HttpServlet {
                         out.println("</center>");
                         out.println("</body>");
                         out.println("</html>");
-                    }  
+                    }
                     break;
-                    
+
                 case 1000:
-                    
+
                     Arreglo.clear();
                     Arreglo = service.ListaGeneral(4);
+
                     String Nombre22 = request.getParameter("nombre");
                     String Apellido22 = request.getParameter("apellido");
                     String Telefono22 = request.getParameter("tel");
                     String Celular22 = request.getParameter("cel");
                     b = service.insertarUser(Nombre22, Apellido22, Telefono22, Celular22);
-                    
+
                     out.println("<!DOCTYPE html>");
                     out.println("<html>");
                     out.println("<head>");
@@ -1135,24 +1136,29 @@ public class Servlet_Menu extends HttpServlet {
                     out.println("<h1><center>El Usuario Se Agrego Satisfactoriamente...</center></h1>");
                     out.println("<br>");
                     out.println("<br>");
-                    out.println("<h1><center>" + Nombre22 + Apellido22 +"</center></h1>");
-                    
-                    
-                    
-                    for (int x = 0; x < Arreglo.size(); x = x + 2) {
-                        out.println("<br>");
-                        out.println("<p><center>" + Arreglo.get(x) + "</center></p>");
-                        out.println("<p><center>" + Arreglo.get(x + 1) +"</center></p>");
-                        out.println("<br>");
+                    out.println("<h1><center>" + Nombre22 + Apellido22 + "</center></h1>");
 
+//                    for (int j = 0; j < Arreglo.size(); j=j+2) {
+//                        out.println("<p>"+ Arreglo.get(j)+"</p>");
+//                        out.println("<p>"+ Arreglo.get(j+1)+"</p>");
+//                    }
+                    for (int x1 = 0; x1 < Arreglo.size(); x1 = x1 + 2) {
+                        out.println("<p>" + Arreglo.get(x1) + "</p>");
+                        out.println("<p>" + Arreglo.get(x1 + 1) + "</p>");
                     }
 
+//                    for (int x1 = 0; x1 < Arreglo.size(); x1 = x1 + 2) {
+//                        out.println("<tr>");
+//                        out.println("<td class=\"text-left\">" + Arreglo.get(x1) + "</td>");
+//                        out.println("<td class=\"text-left\">" + Arreglo.get(x1 + 1) + "</td>");
+//                        out.println("</tr>");
+//
+//                    }
+                    
                     out.println("<p><center>Seras dirigido automaticamente en cinco segundos al menu principal.</center></p>");
                     out.println("</body>");
                     out.println("</html>");
-                    
-                    
-                    
+
                     break;
 
             }
