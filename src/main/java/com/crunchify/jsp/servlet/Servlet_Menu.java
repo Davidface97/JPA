@@ -73,6 +73,8 @@ public class Servlet_Menu extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setContentType("application/json");
+
         PrintWriter out = response.getWriter();
         try {
             connection = conexion.getConnection();
