@@ -238,6 +238,7 @@ public class Servlet_Menu extends HttpServlet {
 //                    out.println("</html>");
                     
                     JsonCompleto=service.ArrayGson();
+                    response.setContentType("application/json");
                     out.println(JsonCompleto);
                     break;
                 case 5:
