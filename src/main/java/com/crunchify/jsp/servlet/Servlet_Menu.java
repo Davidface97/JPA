@@ -238,7 +238,7 @@ public class Servlet_Menu extends HttpServlet {
 //                    out.println("</html>");
                     
                     JsonCompleto=service.ArrayGson();
-                    
+                    out.println(JsonCompleto);
                     break;
                 case 5:
                     if (opcion == 5) {
