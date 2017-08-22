@@ -245,7 +245,7 @@ public class Servlet_Menu extends HttpServlet {
                     if (opcion == 5) {
                         Arreglo.clear();
                         Arreglo = service.ListaGeneral(5);
-
+      
                         out.println("<!DOCTYPE html>");
                         out.println("<html>");
                         out.println("<head>");
