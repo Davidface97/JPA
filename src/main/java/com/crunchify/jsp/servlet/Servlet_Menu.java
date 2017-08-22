@@ -197,44 +197,48 @@ public class Servlet_Menu extends HttpServlet {
                     }
                     break;
                 case 4:
-                    Arreglo.clear();
-                    Arreglo = service.ListaGeneral(4);
+                    String JsonCompleto;
+//                    Arreglo.clear();
+//                    Arreglo = service.ListaGeneral(4);
 
-                    out.println("<!DOCTYPE html>");
-                    out.println("<html>");
-                    out.println("<head>");
-                    out.println("<meta charset=\"utf-8\" />");
-                    out.println("<title>Servlet_Menu</title>");
-                    out.println("<link rel=\"stylesheet\" href=\"tablas.css\">");
-                    out.println("<meta name=\"viewport\" content=\"initial-scale=1.0; maximum-scale=1.0; width=device-width;\">");
-                    out.println("</head>");
-                    out.println("<body>");
-                    out.println("<div class=\"table-title\">");
-                    out.println("<h3>Listado Usuarios</h3>");
-                    out.println("</div>");
-                    out.println("<table class=\"table-fill\">");
-                    out.println("<thead>");
-                    out.println("<tr>");
-                    out.println("<th class=\"text-left\">ID</th>");
-                    out.println("<th class=\"text-left\">Nombre</th>");
-                    out.println("</tr>");
-                    out.println("</thead>");
-                    out.println("<tbody class=\"table-hover\">");
-                    for (int x = 0; x < Arreglo.size(); x = x + 2) {
-                        out.println("<tr>");
-                        out.println("<td class=\"text-left\">" + Arreglo.get(x) + "</td>");
-                        out.println("<td class=\"text-left\">" + Arreglo.get(x + 1) + "</td>");
-                        out.println("</tr>");
-
-                    }
-                    out.println("</tbody>");
-                    out.println("</table>");
-                    out.println("<center>");
-                    out.println("</center>");
+//                    out.println("<!DOCTYPE html>");
+//                    out.println("<html>");
+//                    out.println("<head>");
+//                    out.println("<meta charset=\"utf-8\" />");
+//                    out.println("<title>Servlet_Menu</title>");
+//                    out.println("<link rel=\"stylesheet\" href=\"tablas.css\">");
+//                    out.println("<meta name=\"viewport\" content=\"initial-scale=1.0; maximum-scale=1.0; width=device-width;\">");
+//                    out.println("</head>");
+//                    out.println("<body>");
+//                    out.println("<div class=\"table-title\">");
+//                    out.println("<h3>Listado Usuarios</h3>");
+//                    out.println("</div>");
+//                    out.println("<table class=\"table-fill\">");
+//                    out.println("<thead>");
+//                    out.println("<tr>");
+//                    out.println("<th class=\"text-left\">ID</th>");
+//                    out.println("<th class=\"text-left\">Nombre</th>");
+//                    out.println("</tr>");
+//                    out.println("</thead>");
+//                    out.println("<tbody class=\"table-hover\">");
+//                    for (int x = 0; x < Arreglo.size(); x = x + 2) {
+//                        out.println("<tr>");
+//                        out.println("<td class=\"text-left\">" + Arreglo.get(x) + "</td>");
+//                        out.println("<td class=\"text-left\">" + Arreglo.get(x + 1) + "</td>");
+//                        out.println("</tr>");
+//
+//                    }
+//                    out.println("</tbody>");
+//                    out.println("</table>");
+//                    out.println("<center>");
+//                    out.println("</center>");
+//                    
+//                    out.println("<p><center>Seras dirigido automaticamente en cinco segundos al menu principal.</center></p>");
+//                    out.println("</body>");
+//                    out.println("</html>");
                     
-                    out.println("<p><center>Seras dirigido automaticamente en cinco segundos al menu principal.</center></p>");
-                    out.println("</body>");
-                    out.println("</html>");
+                    JsonCompleto=service.ArrayGson();
+                    
                     break;
                 case 5:
                     if (opcion == 5) {

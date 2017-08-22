@@ -4,19 +4,39 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel='stylesheet' href='estilos.css'>
+        <script>
+            	$(document).ready(function() {
+		$('#enviar').click(function(event) {
+			var nombre = $('#nombre').val();
+			var apellido = $('#apellido').val();
+			var tel = $('#edad').val();
+                        var cel = $('#edad').val();
+                        
+			$.post('Servlet_Menu', {
+				nombre : nombre,
+				apellido: apellido,
+				telefono: tel,
+                                celular: cel
+			}, function(responseText) {
+				$('#anw').html(responseText);
+			});
+		});
+	});
+        </script>
     </head>
     <body background="Pictures/Fondos/fondo2.jpg">
         <br><br><br><br><br><br><br><br>
         <br><br><br><br>
         
         <form class='contacto' name="FormularioTabla" action="Servlet_Menu?opcion=4" method="post">
-            <div><label><center> Nombre </center></label><input type="text" name="nombre"></div>
-            <div><label><center> Apellido </center></label><input type="text" name="apellido"></div>
-            <div><label><center> Telefono </center></label><input type="text" name="tel"></div>
-            <div><label><center> Celular </center></label><input type="text" name="cel"></div>
-            <div><center><input type="submit" name= "RegistrarProducto" value="Registrar"></center></div>
+            <div><label><center> Nombre </center></label><input type="text" name="nombre" id="nombre"></div>
+            <div><label><center> Apellido </center></label><input type="text" name="apellido" id="apellido"></div>
+            <div><label><center> Telefono </center></label><input type="text" name="tel" id="tel"></div>
+            <div><label><center> Celular </center></label><input type="text" name="cel" id="cel"></div>
+            <div><center><input type="submit" id="enviar" name= "RegistrarProducto" value="Registrar"></center></div>
         </form>
-
+        
+        <div id="anw"></div>
 
     </body>
 </html>

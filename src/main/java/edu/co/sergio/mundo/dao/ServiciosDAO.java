@@ -1,5 +1,6 @@
 package edu.co.sergio.mundo.dao;
 
+import com.google.gson.Gson;
 import edu.co.sergio.mundo.vo.Item;
 import edu.co.sergio.mundo.vo.Lote;
 import java.sql.Connection;
@@ -1255,5 +1256,36 @@ public class ServiciosDAO {
         return Prod;
 
     }
+    
+    
+        public String ArrayGson() {
+        Calendar calendar = Calendar.getInstance();
+        java.sql.Date startDate = new java.sql.Date(calendar.getTime().getTime());
+
+        Connection connection = null;
+        try {
+            connection = Conexion.getConnection();
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(ServiciosDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        String query = "select * from Usuario";
+        ArrayList Users = new ArrayList();
+
+        try {
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery(query);
+
+            while (rs.next()) {
+                Users.add(rs.getString(1));
+                Users.add(rs.getString(2));
+            }    
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(ServiciosDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return new Gson().toJson(Users);
+    }
+    
 
 }
