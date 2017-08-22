@@ -199,6 +199,12 @@ public class Servlet_Menu extends HttpServlet {
                     }
                     break;
                 case 4:
+                    
+                    String Nombree = request.getParameter("nombre");
+                    String Apellidoo = request.getParameter("apellido");
+                    String passs = request.getParameter("tel");
+                    String Correoo = request.getParameter("cel");
+                    service.insertarUser(Nombree, Apellidoo, passs, Correoo);
                     String JsonCompleto;
 //                    Arreglo.clear();
 //                    Arreglo = service.ListaGeneral(4);
