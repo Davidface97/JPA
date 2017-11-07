@@ -343,14 +343,14 @@ public class Servlet_Menu extends HttpServlet {
                     String CorreoUsAct = request.getParameter("CorreoUsuarioAct");
                     String TelUsAct = request.getParameter("TelUsuarioAct");
 
-                    user.setId_User(IdUsAct);
-                    user.setPass(passUserAct);
+                    //user.setId_User(IdUsAct);
+                    //user.setPass(passUserAct);
                     user.setNombre(NombreUsAct);
                     user.setApellido(ApellidoUsAct);
                     user.setCorreo(CorreoUsAct);
                     user.setTelefono(TelUsAct);
 
-                    b = service.actUser(user);
+                   // b = service.actUser(user);
 
                     out.println("<!DOCTYPE html>");
                     out.println("<html>");
@@ -451,8 +451,8 @@ public class Servlet_Menu extends HttpServlet {
                 case 12:
 
                     int IdUserToDelete = Integer.parseInt(request.getParameter("IdUserDel"));
-                    user.setId_User(IdUserToDelete);
-                    b = service.borrarUser(user);
+                    //user.setId_User(IdUserToDelete);
+                    //b = service.borrarUser(user);
 
                     if (b == true) {
                         out.println("<!DOCTYPE html>");

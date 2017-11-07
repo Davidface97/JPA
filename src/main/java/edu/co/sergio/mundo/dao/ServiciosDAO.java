@@ -127,7 +127,7 @@ public class ServiciosDAO {
         return b;
     }
 
-    public boolean actUser(User user) {
+    /*public boolean actUser(User user) {
 
         Calendar calendar = Calendar.getInstance();
         java.sql.Date startDate = new java.sql.Date(calendar.getTime().getTime());
@@ -181,9 +181,9 @@ public class ServiciosDAO {
 
         }
         return b;
-    }
+    }*/
 
-    public boolean borrarUser(User user) {
+    /*public boolean borrarUser(User user) {
 
         Calendar calendar = Calendar.getInstance();
         java.sql.Date startDate = new java.sql.Date(calendar.getTime().getTime());
@@ -234,7 +234,7 @@ public class ServiciosDAO {
             b = false;
         }
         return b;
-    }
+    }*/
 
     ///////////////////////////////////////////////////////     LOTES     \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     public boolean inertarLote(int id, String nombre) {

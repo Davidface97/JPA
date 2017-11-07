@@ -2,12 +2,12 @@ package edu.co.sergio.mundo.vo;
 
 public class User {
 
-    private int id_User;
-    private String pass;
-    private String Nombre;
-    private String Apellido;
-    private String Correo;
-    private String Telefono;
+    //private int id_User;
+    //private String pass;
+    public String Nombre;
+    public String Apellido;
+    public String Correo;
+    public String Telefono;
 
     public String getNombre() {
         return Nombre;
@@ -41,7 +41,7 @@ public class User {
         this.Telefono = Telefono;
     }
 
-    public int getId_User() {
+   /* public int getId_User() {
         return id_User;
     }
 
@@ -56,5 +56,5 @@ public class User {
     public void setPass(String pass) {
         this.pass = pass;
     }
-
+*/
 }

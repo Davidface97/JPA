@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel='stylesheet' href='estilos.css'>
+        <script type="text/javascript" src="testAjax.js"></script>
+        
         <script>
             	$(document).ready(function() {
 		$('#enviar').click(function(event) {
@@ -28,11 +30,12 @@
         <br><br><br><br><br><br><br><br>
         <br><br><br><br>
         
-        <form class='contacto' action="Servlet_Menu?opcion=4" name="FormularioTabla" method="post">
+        <!--<form class='contacto' action="Servlet_Menu?opcion=4" name="FormularioTabla" method="post">-->
+        <form class='contacto' name="FormularioTabla">
             <div><label><center> Nombre </center></label><input type="text" name="nombre" id="nombre"></div>
             <div><label><center> Apellido </center></label><input type="text" name="apellido" id="apellido"></div>
             <div><label><center> Telefono </center></label><input type="text" name="tel" id="tel"></div>
-            <div><label><center> Celular </center></label><input type="text" name="cel" id="cel"></div>
+            <div><label><center> Correo </center></label><input type="text" name="correo" id="cel"></div>
             <div><center><input type="submit" id="enviar" name= "RegistrarProducto" value="Registrar"></center></div>
         </form>
         
