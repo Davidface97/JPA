@@ -28,7 +28,7 @@ public class Servlet_Login1 extends HttpServlet {
     Fecha date = new Fecha();
 
     ServiciosDAO service = new ServiciosDAO();
-    tx generic = new tx();
+    //tx generic = new tx();
     Conexion conexion = new Conexion(); 
     Connection connection = null;
 
