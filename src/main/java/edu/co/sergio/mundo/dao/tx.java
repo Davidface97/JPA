@@ -65,7 +65,7 @@ public class tx<T> {
         }
         String full = statement + statement2 + statement3 + statement4;
         System.out.println(full);
-
+        System.out.println("     ");
         
         Statement stat;
         try {

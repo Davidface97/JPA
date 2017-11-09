@@ -40,6 +40,14 @@
             <artifactId>postgresql</artifactId>
             <version>9.0-801.jdbc4</version>
         </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java       MYSQL DRIVER       -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.6</version>
+        </dependency>
+
                 
         <dependency>
             <artifactId>jfreechart</artifactId>

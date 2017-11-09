@@ -31,7 +31,8 @@ public class Conexion2 {
         try {
             //2. Obtener la conexion
             this.connection =
-            DriverManager.getConnection("jdbc:mysql://localhost:3306/JPA","root","root");
+            DriverManager.getConnection("jdbc:mysql://localhost:3306/AppUAlfa","root","");
+            System.out.println("Conexion Exitosa");
         } catch (SQLException ex) {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
         }
